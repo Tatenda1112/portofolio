@@ -4,9 +4,8 @@
   "description": "Tatenda Mukonoweshuro's Portfolio",
   "main": "dist/main.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "start": "vite",
+    "build": "vite build",
+    "dev": "vite",
     "preview": "vite preview"
   },
   "devDependencies": {
