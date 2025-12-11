@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Tatenda Mukonoweshuro's Portfolio",
   "scripts": {
+    "start": "live-server --port=3000 --open=/",
+    "dev": "live-server --port=3000 --open=/",
     "build": "echo 'Build complete'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
