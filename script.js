@@ -146,8 +146,66 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScroll();
     };
 
-    // Initialize the application
+        // Initialize the application
     init();
+    
+    // Initialize counter animation when in view
+    const initCounters = () => {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 100; // The lower the faster
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const count = target.getAttribute('data-count');
+                    
+                    // Check if the count has a '+' and handle it
+                    let targetNumber, hasPlus;
+                    if (count.includes('+')) {
+                        targetNumber = parseInt(count);
+                        hasPlus = true;
+                    } else {
+                        targetNumber = parseInt(count);
+                        hasPlus = false;
+                    }
+                    
+                    // If still not a number, skip this counter
+                    if (isNaN(targetNumber)) {
+                        console.warn(`Invalid number for counter: ${count}`);
+                        return;
+                    }
+                    
+                    let current = 0;
+                    const increment = Math.max(1, Math.ceil(targetNumber / speed));
+                    
+                    const updateCount = () => {
+                        if (current < targetNumber) {
+                            current = Math.min(current + increment, targetNumber);
+                            target.textContent = current;
+                            requestAnimationFrame(updateCount);
+                        } else if (hasPlus) {
+                            target.textContent = targetNumber + '+';
+                        } else {
+                            target.textContent = targetNumber;
+                        }
+                    };
+                    
+                    // Start the animation
+                    requestAnimationFrame(updateCount);
+                    observer.unobserve(target); // Stop observing once animated
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => {
+            counter.textContent = '0';
+            observer.observe(counter);
+        });
+    };
+    
+    // Initialize counters
+    initCounters();
 });
 
 // Add shadow to navbar on scroll
