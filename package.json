@@ -2,12 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Tatenda Mukonoweshuro's Portfolio",
+  "type": "module",
   "scripts": {
-    "start": "live-server --port=3000 --open=/",
-    "dev": "live-server --port=3000 --open=/",
-    "build": "echo 'Build complete'"
+    "dev": "vite",
+    "start": "vite preview",
+    "build": "vite build"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "vite": "^5.0.0"
   }
 }
