@@ -23,7 +23,7 @@
     <blockquote>Could I build a system that identifies and structures donation announcements directly from public social media posts?</blockquote>
     <p>That led me to study public philanthropy posts shared by Zimbabwean businessman Wicknell Chivayo on X. I built an automated pipeline with <strong>n8n, TwitterAPI.io, an LLM, and PostgreSQL</strong>, then loaded it into a SQL Server warehouse feeding Power BI.</p>
 
-    <figure><img src="../src/images/donation-n8n.jpg" alt="n8n workflow: API retrieval, LLM classification, PostgreSQL storage" loading="lazy"><figcaption>Figure 1 — the n8n workflow, from scheduled collection to processing and storage.</figcaption></figure>
+    <figure><img src="../src/images/donation-n8n.jpg?v=2" alt="n8n workflow: API retrieval, LLM classification, PostgreSQL storage" loading="lazy"><figcaption>Figure 1 — the n8n workflow, from scheduled collection to processing and storage.</figcaption></figure>
 
     <h2>How the workflow works</h2>
     <p>It runs every day at 9:00 AM. TwitterAPI.io retrieves new posts, and n8n manages each stage:</p>
