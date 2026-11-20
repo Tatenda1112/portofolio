@@ -7,22 +7,25 @@
 <meta name="description" content="Tatenda Mukonoweshuro — Data Analyst, Data Engineer and AI Automation. Pipelines, dashboards and models, built end to end.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="progress" id="progress"></div>
 <div class="cursor-dot" id="cursorDot"></div>
 
-<header class="site-header">
-  <a href="#top" class="wordmark">Tatenda<span>.</span></a>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#made">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Say hi</a>
-    <button class="theme-btn" id="themeBtn" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
-  </nav>
+<header class="site-header" id="siteHeader">
+  <div class="inner">
+    <a href="#top" class="wordmark">Tatenda<span class="blip">.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Say hi</a>
+      <button class="theme-btn" id="themeBtn" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
 </header>
 
 <main class="wrap">
@@ -30,7 +33,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <span class="eyebrow">Data Analyst · Data Engineer · AI Automation</span>
-    <h1>Hi, I'm Tatenda.</h1>
+    <h1>Hi, I'm Tatenda <span class="wave">👋</span></h1>
 
     <div class="status-row">
       <span class="pill"><span class="dot"></span>open to data &amp; AI roles</span>
@@ -44,26 +47,20 @@
 
     <p class="by-day">Tools I reach for: Power BI, SQL, Python, PostgreSQL, SQL Server, n8n, FastAPI. I also teach at <a href="https://tatstech.vercel.app" target="_blank" rel="noopener">TatsTech</a> and build <a href="https://sheaflydocs.com" target="_blank" rel="noopener">Sheafly</a> on the side.</p>
 
-    <div class="doodle reveal" aria-hidden="true">
-      <svg viewBox="0 0 420 110" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff6a39" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 70 C 40 20, 70 95, 100 55 C 120 30, 135 75, 150 60" />
-        <line x1="195" y1="95" x2="195" y2="15" />
-        <line x1="190" y1="95" x2="410" y2="95" />
-        <rect x="210" y="60" width="26" height="35" />
-        <rect x="246" y="42" width="26" height="53" />
-        <rect x="282" y="68" width="26" height="27" />
-        <rect x="318" y="30" width="26" height="65" />
-        <rect x="354" y="50" width="26" height="45" />
-        <path d="M160 58 C 172 58, 178 58, 188 58" stroke-dasharray="1 9" />
-      </svg>
+    <!-- SIGNATURE: a live data pipeline -->
+    <div class="pipeline-stage reveal">
+      <span class="cap">live · data in motion</span>
+      <canvas id="pipelineCanvas"></canvas>
+      <span class="hint">move your mouse through it ✦</span>
     </div>
   </section>
 
-  <!-- ============ ABOUT / WHAT I DO ============ -->
+  <!-- ============ 01 · WHAT I DO ============ -->
   <section class="section" id="about">
     <div class="section-head reveal">
-      <h2>What I do</h2>
-      <p class="dim">I work across the full data journey: extracting it, moving and cleaning it, modelling it, and putting it in front of someone who has to decide something.</p>
+      <span class="section-num">01 — what i do</span>
+      <h2>Across the whole data journey</h2>
+      <p class="dim">Extracting it, moving and cleaning it, modelling it, and putting it in front of someone who has to decide something.</p>
     </div>
     <div class="do-grid reveal">
       <div class="do-card">
@@ -95,11 +92,50 @@
     </div>
   </section>
 
-  <!-- ============ FEATURE: FMCG dashboard ============ -->
-  <section class="section" id="fmcg">
-    <div class="feature-grid">
+  <!-- ============ 02 · FEATURED WORK ============ -->
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <span class="section-num">02 — featured work</span>
+      <h2>Three data stories</h2>
+    </div>
+
+    <!-- UZ GRADUATION -->
+    <div class="uz">
+      <div class="section-head reveal" style="margin-top:6px;">
+        <h3 style="font-size:22px;">UZ 45th Graduation, 2026 — a handbook turned into a product</h3>
+        <p class="dim">An 80-page static graduation handbook, rebuilt into a three-page interactive Power BI dashboard you can actually explore.</p>
+      </div>
+      <div class="uz-stats reveal" id="uzStats">
+        <div class="uz-stat"><b data-count="7127">0</b><span>graduates</span></div>
+        <div class="uz-stat"><b data-count="366">0</b><span>academic programmes</span></div>
+        <div class="uz-stat"><b data-count="53" data-suffix="%">0</b><span>women graduates</span></div>
+        <div class="uz-stat"><b data-count="817">0</b><span>academic recognitions</span></div>
+      </div>
+
+      <div class="ratio reveal" data-fill="79">
+        <div class="ratio-label"><span>undergraduate 79%</span><span>postgraduate 21%</span></div>
+        <div class="ratio-bar"><div class="ratio-fill seg-a"></div><div class="ratio-fill seg-b" data-fill="21"></div></div>
+      </div>
+
+      <div class="uz-facts reveal">
+        <div class="uz-fact"><b>Business &amp; Economics</b> produced the most graduates (1,367), then <b>Medicine &amp; Health Sciences</b> (1,139).</div>
+        <div class="uz-fact"><b>Actuarial Science</b> led undergraduate First Class awards with 36 — followed by Biomedical Sciences with 33.</div>
+        <div class="uz-fact"><b>Medicine</b> recorded the most recognitions (146), then Education (130). Recognitions were ~11.5% of graduates.</div>
+        <div class="uz-fact"><b>Biomedical Sciences</b> was the single largest programme, with 301 graduates.</div>
+      </div>
+
+      <div class="uz-sections reveal">
+        <span class="chip"><b>▸</b> Graduation Overview</span>
+        <span class="chip"><b>▸</b> Academic Excellence</span>
+        <span class="chip"><b>▸</b> Graduate Directory (searchable)</span>
+      </div>
+      <p class="src-note reveal">Built with Power BI, Power Query, DAX and Excel. Independently developed from the public UZ 45th Graduation Handbook, 2026 — not an official University of Zimbabwe publication.</p>
+    </div>
+
+    <!-- FMCG DASHBOARD -->
+    <div class="feature-grid" style="margin-top:46px;">
       <div class="feature-text reveal">
-        <h2>Why growing sales don't mean growing profit</h2>
+        <h3 style="font-size:22px;">Why growing sales don't mean growing profit</h3>
         <p>A three-page Power BI dashboard on a simulated FMCG distributor. Revenue was up 7.6% to $58M — but underneath it, three leaks were quietly eating the profit.</p>
         <div class="leak-grid">
           <div class="leak"><b>Empty shelves.</b> December stockouts doubled; Masvingo ran dry 3× as often as Harare. $1.11M in sales never happened.</div>
@@ -121,17 +157,15 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ FEATURE: donation pipeline ============ -->
-  <section class="section" id="pipeline">
-    <div class="feature-grid">
+    <!-- DONATION PIPELINE -->
+    <div class="feature-grid" style="margin-top:46px;">
       <div class="preview-frame reveal">
         <img src="src/images/donation-pipeline-preview.jpg" alt="Power BI dashboard built on top of the pipeline" class="active" loading="lazy">
       </div>
       <div class="feature-text reveal">
-        <h2>I turn public posts into a warehouse</h2>
-        <p>A personal project: an n8n workflow collects posts daily, an LLM extracts structured records from them, and one command loads a SQL Server warehouse feeding a Power BI dashboard — bronze, silver and gold layers, every figure traceable back to its source.</p>
+        <h3 style="font-size:22px;">I turn public posts into a warehouse</h3>
+        <p>An n8n workflow collects posts daily, an LLM extracts structured records, and one command loads a SQL Server warehouse feeding Power BI — bronze, silver and gold layers, every figure traceable back to its source.</p>
         <div class="stat-row">
           <div class="stat"><b>1,102</b><span>posts processed</span></div>
           <div class="stat"><b>96%</b><span>auto-sort accuracy</span></div>
@@ -149,9 +183,9 @@
     </div>
   </section>
 
-  <!-- ============ SIDE PROJECTS ============ -->
+  <!-- ============ 03 · SIDE PROJECTS ============ -->
   <section class="section" id="side">
-    <div class="section-head reveal"><h2>Two things I run on the side</h2></div>
+    <div class="section-head reveal"><span class="section-num">03 — on the side</span><h2>Two things I run</h2></div>
     <div class="side-grid">
       <div class="side-card reveal">
         <h3>Sheafly</h3>
@@ -166,13 +200,13 @@
     </div>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
+  <!-- ============ 04 · EXPERIENCE ============ -->
   <section class="section" id="experience">
     <div class="section-head reveal">
-      <h2>Experience</h2>
+      <span class="section-num">04 — experience</span>
+      <h2>Where I've worked</h2>
       <p class="dim">Click "tl;dr" on any role for the one-line version.</p>
     </div>
-
     <div class="exp-list reveal">
 
       <article class="exp-card">
@@ -185,7 +219,7 @@
         <p class="exp-tldr" id="tldr-sivio" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Automated cleaning of African philanthropic giving data; handled anonymisation for a 17-country youth employment study.</p>
         <ul class="exp-full" id="full-sivio">
           <li><b>Built Python scripts</b> that automated the cleaning and processing of philanthropic giving data scraped from websites across Africa, cutting turnaround time by 20%.</li>
-          <li><b>Protected personal data</b> for a 17-country youth employment study led by CAPSI (Wits Business School) with the Mastercard Foundation — transcription, anonymisation and secure storage of interview data in MAXQDA.</li>
+          <li><b>Protected personal data</b> for a 17-country youth employment study led by CAPSI (Wits Business School) with the Mastercard Foundation — transcription, anonymisation and secure storage in MAXQDA.</li>
           <li>Built a <b>Power BI (DAX) dashboard</b> for the State of Giving in Africa report.</li>
         </ul>
       </article>
@@ -214,7 +248,7 @@
         <p class="exp-tldr" id="tldr-tats" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Teach Python, SQL and Excel; 30+ projects delivered, 20+ students reached distinctions.</p>
         <ul class="exp-full" id="full-tats">
           <li><b>Delivered 30+ data analytics and research projects</b> for clients.</li>
-          <li><b>Teach Python, SQL and Excel</b> to students in plain language, mentoring them through data cleaning, exploratory analysis and dashboard projects.</li>
+          <li><b>Teach Python, SQL and Excel</b> in plain language, mentoring through data cleaning, exploratory analysis and dashboard projects.</li>
           <li>More than <b>20 students have gone on to achieve distinctions</b>.</li>
         </ul>
       </article>
@@ -231,7 +265,7 @@
           <li><b>Cleaned and structured actuarial datasets</b> for IFRS 17 valuation models using Excel and Python.</li>
           <li>Built automated <b>Python ETL pipelines</b> and maintained PostgreSQL and MySQL databases for reporting.</li>
           <li>Developed supervised <b>machine learning models (PD, LGD, survival)</b> for IFRS 9 on large financial datasets.</li>
-          <li>Implemented validation checks that improved data accuracy; built <b>Power BI dashboards</b> for risk, claims and forecasting.</li>
+          <li>Implemented validation checks; built <b>Power BI dashboards</b> for risk, claims and forecasting.</li>
         </ul>
       </article>
 
@@ -253,9 +287,10 @@
     </div>
   </section>
 
-  <!-- ============ SOME THINGS I MADE ============ -->
+  <!-- ============ 05 · OTHER THINGS ============ -->
   <section class="section" id="made">
     <div class="section-head reveal">
+      <span class="section-num">05 — the archive</span>
       <h2>Some other things I've built</h2>
       <p class="dim">Smaller projects, mostly data and machine learning.</p>
     </div>
@@ -293,10 +328,11 @@
     <p class="comp-line reveal">I also compete on <a href="https://zindi.africa/users/TatsTech" target="_blank" rel="noopener">Zindi</a> — ranked <b>9th of 631</b> (top 2%) in an insurance prediction challenge, and <b>3rd of 56</b> in a maize crop disease challenge.</p>
   </section>
 
-  <!-- ============ CONTACT ============ -->
+  <!-- ============ 06 · CONTACT ============ -->
   <section class="section" id="contact">
     <div class="section-head reveal">
-      <h2>Say hi</h2>
+      <span class="section-num">06 — say hi</span>
+      <h2>Let's talk</h2>
       <p class="dim">Based in Harare, Zimbabwe. Open to remote work in any time zone — and to helping with thesis or dissertation data analysis.</p>
     </div>
     <div class="contact-links reveal">
