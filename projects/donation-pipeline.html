@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Posts → Data Warehouse — Tatenda Mukonoweshuro</title>
+<meta name="description" content="A daily n8n + LLM pipeline that turns public posts into a structured SQL Server warehouse and Power BI dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261120f">
+</head>
+<body>
+<main class="project-page">
+  <a class="back" href="../index.html#work">← back to work</a>
+  <div class="kicker">n8n · llm · postgresql · sql server · power bi</div>
+  <h1>Public Posts → Data Warehouse</h1>
+  <p class="sub">A daily pipeline that turns unstructured social posts into a traceable warehouse.</p>
+  <div class="tags"><span>n8n</span><span>LLM</span><span>PostgreSQL</span><span>SQL Server</span><span>Power BI</span></div>
+
+  <article>
+    <p>One day I wanted a project to strengthen my automation, AI and SQL skills. Instead of downloading a ready-made dataset, I asked myself:</p>
+    <blockquote>Could I build a system that identifies and structures donation announcements directly from public social media posts?</blockquote>
+    <p>That led me to study public philanthropy posts shared by Zimbabwean businessman Wicknell Chivayo on X. I built an automated pipeline with <strong>n8n, TwitterAPI.io, an LLM, and PostgreSQL</strong>, then loaded it into a SQL Server warehouse feeding Power BI.</p>
+
+    <figure><img src="../src/images/donation-n8n.jpg" alt="n8n workflow: API retrieval, LLM classification, PostgreSQL storage" loading="lazy"><figcaption>Figure 1 — the n8n workflow, from scheduled collection to processing and storage.</figcaption></figure>
+
+    <h2>How the workflow works</h2>
+    <p>It runs every day at 9:00 AM. TwitterAPI.io retrieves new posts, and n8n manages each stage:</p>
+    <ol>
+      <li>Store original posts in PostgreSQL.</li>
+      <li>Retrieve unprocessed posts and use an LLM to decide whether each is donation-related.</li>
+      <li>Extract recipients, beneficiaries, donation types, quantities, amounts, currencies, purposes, locations and dates.</li>
+      <li>Separate cash from vehicles, property, equipment and other giving.</li>
+      <li>Store the records and mark every evaluated post as processed.</li>
+    </ol>
+    <p>Unique tweet IDs control duplicates. Tracking processed posts prevents repeat classification and extra API cost.</p>
+
+    <div class="stat-strip">
+      <div><b>1,102</b><span>posts processed</span></div>
+      <div><b>96%</b><span>auto-sort accuracy</span></div>
+      <div><b>3</b><span>warehouse layers</span></div>
+      <div><b>1</b><span>command to run it</span></div>
+    </div>
+
+    <figure><img src="../src/images/donation-postgres.jpg" alt="Donation records queried in PostgreSQL" loading="lazy"><figcaption>Figure 2 — structured donation records in PostgreSQL.</figcaption></figure>
+
+    <h2>Bronze, silver, gold</h2>
+    <p>One PowerShell command exports from PostgreSQL and loads a SQL Server warehouse through bronze (raw), silver (clean, typed, enriched) and gold (star-schema views for Power BI). Each run writes a load log and stops before reporting if a step fails, so the dashboard keeps its last good data. New donations are sorted into money / vehicle / house / other by SQL rules that agree with manual review about 96% of the time.</p>
+
+    <figure><img src="../src/images/donation-pipeline-preview.jpg" alt="Power BI dashboard built on the warehouse" loading="lazy"><figcaption>Figure 3 — the Power BI dashboard, every figure traceable to its source post.</figcaption></figure>
+
+    <h2>Challenges</h2>
+    <p>The project meant working through API pagination, duplicate records, inconsistent dates, AI timeouts, missing values, and donations with multiple recipients or quantities — which made reliable extraction and record tracking essential.</p>
+
+    <p class="srcnote">Technologies: n8n, an LLM, TwitterAPI.io, PostgreSQL, SQL Server, Power BI. An independent learning project based on publicly available information; AI-extracted records require validation and are not independently verified financial figures.</p>
+
+    <div class="pfoot">
+      <a href="../index.html#work">← all projects</a>
+      <a href="https://github.com/Tatenda1112/wicknell-chivayo-donation-data-pipeline" target="_blank" rel="noopener">code on github ↗</a>
+    </div>
+  </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UZ 45th Graduation Analytics — Tatenda Mukonoweshuro</title>
+<meta name="description" content="Turning an 80-page printed graduation handbook into a three-page interactive Power BI dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261120f">
+</head>
+<body>
+<main class="project-page">
+  <a class="back" href="../index.html#work">← back to work</a>
+  <div class="kicker">power bi · power query · dax</div>
+  <h1>UZ 45th Graduation Analytics</h1>
+  <p class="sub">An 80-page printed handbook, turned into a three-page interactive dashboard.</p>
+  <div class="tags"><span>Python</span><span>Power BI</span><span>Power Query</span><span>DAX</span><span>Excel</span></div>
+
+  <article>
+    <blockquote>Can an 80-page printed graduation handbook become a three-page interactive dashboard?</blockquote>
+    <p>That was the question I asked after the University of Zimbabwe held its 45th Graduation Ceremony. The idea sounded exciting, but there was one immediate challenge: <strong>the data was not available as a downloadable dataset, or even as a digital document.</strong> It existed inside a physical handbook handed out at the ceremony.</p>
+
+    <h2>From printed pages to usable data</h2>
+    <p>Instead of abandoning the idea, I contacted a graduate who had attended and arranged for every page to be photographed, then combined the images into a scanned PDF. A scanned PDF is not structured data, so I used <strong>Python and text-extraction techniques</strong> to retrieve the information, then cleaned and transformed it into a structured dataset. After several rounds of validation, modelling and reconciliation, the handbook became a three-page Power BI dashboard for the <strong>Class of 2026</strong>.</p>
+
+    <div class="stat-strip">
+      <div><b>7,127</b><span>graduates</span></div>
+      <div><b>366</b><span>programmes</span></div>
+      <div><b>53%</b><span>women</span></div>
+      <div><b>817</b><span>recognitions</span></div>
+    </div>
+
+    <h2>What the data revealed</h2>
+    <ul>
+      <li>About <strong>79% undergraduate</strong> and <strong>21% postgraduate</strong> qualifications.</li>
+      <li><strong>Business Management Sciences &amp; Economics</strong> produced the most graduates (1,367), then <strong>Medicine &amp; Health Sciences</strong> (1,139).</li>
+      <li><strong>Biomedical Sciences</strong> was the largest single programme (301) and had the most Book Prizes (8).</li>
+      <li><strong>Actuarial Science</strong> led undergraduate First Class awards with 36, then Biomedical Sciences with 33.</li>
+      <li>Academic recognitions were about <strong>11.5%</strong> of all graduates.</li>
+    </ul>
+
+    <h2>Inside the three pages</h2>
+    <h3>1 · Graduation Overview</h3>
+    <p>Graduate composition by faculty, programme, gender and academic level.</p>
+    <figure><img src="../src/images/uz-overview.jpg" alt="Graduation Overview dashboard page" loading="lazy"><figcaption>Figure 1 — Graduation Overview: the composition of the Class of 2026.</figcaption></figure>
+    <h3>2 · Academic Excellence</h3>
+    <p>First Class awards, distinctions, Book Prizes and other recognition across faculties and programmes.</p>
+    <figure><img src="../src/images/uz-excellence.jpg" alt="Academic Excellence dashboard page" loading="lazy"><figcaption>Figure 2 — Academic Excellence: recognition and achievement.</figcaption></figure>
+    <h3>3 · Graduate Directory</h3>
+    <p>Searchable by name, faculty, programme and academic level, with slicers and reset.</p>
+    <figure><img src="../src/images/uz-directory.jpg" alt="Graduate Directory dashboard page" loading="lazy"><figcaption>Figure 3 — Graduate Directory: searchable records (names shown are public handbook data).</figcaption></figure>
+
+    <h2>More than building visuals</h2>
+    <p>This project meant sourcing inaccessible data, converting images into text, cleaning inconsistent records, validating totals, building a relational model, writing DAX measures, and presenting it all as an interactive product. It reminded me that data does not always arrive in a clean spreadsheet — sometimes the real work begins with creating usable data from an unconventional source.</p>
+
+    <p class="srcnote">Tools: Python, Power BI, Power Query, DAX, Excel. Source: University of Zimbabwe 45th Graduation Handbook, 2026. This is an independently developed portfolio project, not an official University of Zimbabwe publication.</p>
+
+    <div class="pfoot">
+      <a href="../index.html#work">← all projects</a>
+      <a href="https://github.com/Tatenda1112" target="_blank" rel="noopener">my github ↗</a>
+    </div>
+  </article>
+</main>
+</body>
+</html>
