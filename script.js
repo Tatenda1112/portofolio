@@ -91,6 +91,20 @@
     });
   });
 
+  /* UZ tabbed preview */
+  const uzFrame = document.getElementById("uzFrame");
+  if (uzFrame) {
+    const tabs = document.querySelectorAll(".uz-tabs .uztab");
+    const imgs = uzFrame.querySelectorAll("img");
+    tabs.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabs.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        imgs.forEach((img) => img.classList.toggle("active", img.dataset.i === btn.dataset.i));
+      });
+    });
+  }
+
   /* draggable dashboards gallery */
   const gallery = document.getElementById("gallery");
   if (gallery) {

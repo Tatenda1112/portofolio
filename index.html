@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261120">
+<link rel="stylesheet" href="styles.css?v=20261120b">
 </head>
 <body>
 
@@ -105,6 +105,16 @@
           <div><div class="card-name">UZ 45th Graduation, 2026</div><div class="card-role">Power BI · Power Query · DAX</div></div>
           <span class="status">portfolio</span>
         </div>
+        <div class="uz-tabs">
+          <button class="uztab active" data-i="0">overview</button>
+          <button class="uztab" data-i="1">academic excellence</button>
+          <button class="uztab" data-i="2">graduate directory</button>
+        </div>
+        <div class="uz-frame" id="uzFrame">
+          <img src="src/images/uz-overview.jpg" alt="UZ graduation overview page" class="active" data-i="0" loading="lazy">
+          <img src="src/images/uz-excellence.jpg" alt="UZ academic excellence page" data-i="1" loading="lazy">
+          <img src="src/images/uz-directory.jpg" alt="UZ graduate directory page" data-i="2" loading="lazy">
+        </div>
         <p class="prose" style="margin:13px 0 12px;font-size:14px;color:var(--ink-dim);">An 80-page static graduation handbook, rebuilt into a three-page interactive dashboard: a graduation overview, an academic-excellence view, and a searchable graduate directory.</p>
         <div class="uz-stats" id="uzStats">
           <div class="uz-stat"><b data-count="7127">0</b><span>graduates</span></div>
@@ -154,6 +164,9 @@
       <div class="shot"><img src="src/images/fmcg-inventory.jpg" alt="Inventory & warehouse"><span class="cap">FMCG · inventory</span></div>
       <div class="shot"><img src="src/images/fmcg-pricing.jpg" alt="Pricing & profitability"><span class="cap">FMCG · profitability</span></div>
       <div class="shot"><img src="src/images/donation-pipeline-preview.jpg" alt="Donations tracker"><span class="cap">donations · overview</span></div>
+      <div class="shot"><img src="src/images/uz-overview.jpg" alt="UZ graduation overview"><span class="cap">uz · graduation</span></div>
+      <div class="shot"><img src="src/images/uz-excellence.jpg" alt="UZ academic excellence"><span class="cap">uz · excellence</span></div>
+      <div class="shot"><img src="src/images/uz-directory.jpg" alt="UZ graduate directory"><span class="cap">uz · directory</span></div>
     </div>
     <hr class="rule">
   </section>
@@ -292,6 +305,6 @@
   <p class="fine">built by hand · © 2026 tatenda mukonoweshuro</p>
 </footer>
 
-<script src="script.js?v=20261120"></script>
+<script src="script.js?v=20261120b"></script>
 </body>
 </html>

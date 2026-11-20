@@ -190,8 +190,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 .proj .pstack { font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); margin: 3px 0 5px; }
 .proj .pdesc { font-size: 13.5px; color: var(--ink-dim); }
 
+/* UZ tabbed preview */
+.uz-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 14px 0 10px; }
+.uztab {
+  font-family: var(--mono); font-size: 11.5px; padding: 5px 11px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink-dim); cursor: pointer; transition: all 0.16s;
+}
+.uztab.active { color: var(--accent); border-color: var(--accent); }
+.uz-frame {
+  position: relative; height: 230px; border-radius: 11px; overflow: hidden; border: 1px solid var(--line); background: var(--paper);
+  box-shadow: 0 14px 40px -28px rgba(0,0,0,0.5);
+}
+.uz-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; transition: opacity 0.35s ease; }
+.uz-frame img.active { opacity: 1; }
+
 /* UZ count-up stats inside a card */
-.uz-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 4px 0 2px; }
+.uz-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin: 16px 0 2px; }
 .uz-stat b { display: block; font-family: var(--serif); font-size: 30px; color: var(--ink); line-height: 1; }
 .uz-stat span { font-size: 11px; color: var(--ink-dim); display: block; margin-top: 4px; }
 
