@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tatenda Mukonoweshuro</title>
-<meta name="description" content="Tatenda Mukonoweshuro — AI automation and data engineer. n8n, Python and LLM pipelines, built end to end.">
+<meta name="description" content="Tatenda Mukonoweshuro — Data Analyst, Data Engineer and AI Automation. Pipelines, dashboards and models, built end to end.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,11 +12,16 @@
 </head>
 <body>
 
+<div class="cursor-dot" id="cursorDot"></div>
+
 <header class="site-header">
   <a href="#top" class="wordmark">Tatenda<span>.</span></a>
   <nav>
+    <a href="#about">About</a>
     <a href="#made">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#contact">Say hi</a>
+    <button class="theme-btn" id="themeBtn" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
   </nav>
 </header>
 
@@ -24,15 +29,20 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <span class="eyebrow">AI &amp; automation engineer</span>
+    <span class="eyebrow">Data Analyst · Data Engineer · AI Automation</span>
     <h1>Hi, I'm Tatenda.</h1>
+
+    <div class="status-row">
+      <span class="pill"><span class="dot"></span>open to data &amp; AI roles</span>
+      <span class="clock" id="clock">Harare · --:--</span>
+    </div>
 
     <div class="hero-row">
       <img src="src/images/tatenda-avatar.jpg" alt="Tatenda Mukonoweshuro" class="avatar">
-      <p class="lede">I build things that turn messy, manual work — spreadsheets, scraped pages, scanned posts — into pipelines that run on their own.</p>
+      <p class="lede">I turn raw, messy data into decisions people can act on — from the pipeline that moves it, to the model that explains it, to the dashboard a manager can read in a minute.</p>
     </div>
 
-    <p class="by-day">By day I write Python, SQL and n8n workflows. I also teach at <a href="https://tatstech.vercel.app" target="_blank" rel="noopener">TatsTech</a> and build <a href="https://sheaflydocs.com" target="_blank" rel="noopener">Sheafly</a> on the side.</p>
+    <p class="by-day">Tools I reach for: Power BI, SQL, Python, PostgreSQL, SQL Server, n8n, FastAPI. I also teach at <a href="https://tatstech.vercel.app" target="_blank" rel="noopener">TatsTech</a> and build <a href="https://sheaflydocs.com" target="_blank" rel="noopener">Sheafly</a> on the side.</p>
 
     <div class="doodle reveal" aria-hidden="true">
       <svg viewBox="0 0 420 110" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff6a39" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
@@ -49,12 +59,79 @@
     </div>
   </section>
 
+  <!-- ============ ABOUT / WHAT I DO ============ -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <h2>What I do</h2>
+      <p class="dim">I work across the full data journey: extracting it, moving and cleaning it, modelling it, and putting it in front of someone who has to decide something.</p>
+    </div>
+    <div class="do-grid reveal">
+      <div class="do-card">
+        <span class="tag">Data Analytics</span>
+        <h3>Dashboards people actually read</h3>
+        <p>Power BI with DAX, Power Query and relational data models that turn business data into a clear answer.</p>
+      </div>
+      <div class="do-card">
+        <span class="tag">Data Engineering</span>
+        <h3>Pipelines that run on their own</h3>
+        <p>ETL with Python, SQL, PostgreSQL and n8n — bronze, silver and gold layers, star schemas feeding reporting.</p>
+      </div>
+      <div class="do-card">
+        <span class="tag">ML &amp; AI</span>
+        <h3>Models and automation</h3>
+        <p>Credit risk and survival models, LLM-assisted extraction from unstructured text, FastAPI backends, n8n workflows.</p>
+      </div>
+      <div class="do-card">
+        <span class="tag">Training</span>
+        <h3>TatsTech — founder</h3>
+        <p>30+ students supported in Python, data analysis and research; more than 20 have gone on to distinctions.</p>
+      </div>
+    </div>
+    <div class="tool-row reveal">
+      <span class="tool-chip">Power BI</span><span class="tool-chip">SQL</span><span class="tool-chip">Python</span>
+      <span class="tool-chip">PostgreSQL</span><span class="tool-chip">SQL Server</span><span class="tool-chip">Excel</span>
+      <span class="tool-chip">Spark</span><span class="tool-chip">n8n</span><span class="tool-chip">FastAPI</span>
+      <span class="tool-chip">SPSS</span><span class="tool-chip">R</span>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE: FMCG dashboard ============ -->
+  <section class="section" id="fmcg">
+    <div class="feature-grid">
+      <div class="feature-text reveal">
+        <h2>Why growing sales don't mean growing profit</h2>
+        <p>A three-page Power BI dashboard on a simulated FMCG distributor. Revenue was up 7.6% to $58M — but underneath it, three leaks were quietly eating the profit.</p>
+        <div class="leak-grid">
+          <div class="leak"><b>Empty shelves.</b> December stockouts doubled; Masvingo ran dry 3× as often as Harare. $1.11M in sales never happened.</div>
+          <div class="leak"><b>Discounts that cost more than they earn.</b> $1.03M in promo spend returned $543K. 14 of 40 campaigns lost money.</div>
+          <div class="leak"><b>The bestseller that barely pays.</b> The top seller ($7.6M) kept only 11.7% as profit after cost to serve.</div>
+        </div>
+        <p class="fine-note">The company and figures are fictional, built for portfolio purposes. The pattern — and the fix — is real.</p>
+      </div>
+      <div>
+        <div class="tab-row">
+          <button class="tab-btn active" data-img="0">Executive</button>
+          <button class="tab-btn" data-img="1">Inventory</button>
+          <button class="tab-btn" data-img="2">Pricing</button>
+        </div>
+        <div class="preview-frame reveal" id="fmcgFrame">
+          <img src="src/images/fmcg-executive.jpg" alt="Executive overview page" class="active" data-i="0">
+          <img src="src/images/fmcg-inventory.jpg" alt="Inventory and warehouse page" data-i="1">
+          <img src="src/images/fmcg-pricing.jpg" alt="Pricing, promotions and profitability page" data-i="2">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FEATURE: donation pipeline ============ -->
   <section class="section" id="pipeline">
     <div class="feature-grid">
+      <div class="preview-frame reveal">
+        <img src="src/images/donation-pipeline-preview.jpg" alt="Power BI dashboard built on top of the pipeline" class="active" loading="lazy">
+      </div>
       <div class="feature-text reveal">
         <h2>I turn public posts into a warehouse</h2>
-        <p>A personal project: an n8n workflow collects posts daily, an LLM extracts structured records from them, and one command loads a SQL Server warehouse feeding a Power BI dashboard — built in Bronze, Silver and Gold layers, with every figure traceable back to its source.</p>
+        <p>A personal project: an n8n workflow collects posts daily, an LLM extracts structured records from them, and one command loads a SQL Server warehouse feeding a Power BI dashboard — bronze, silver and gold layers, every figure traceable back to its source.</p>
         <div class="stat-row">
           <div class="stat"><b>1,102</b><span>posts processed</span></div>
           <div class="stat"><b>96%</b><span>auto-sort accuracy</span></div>
@@ -62,19 +139,19 @@
         </div>
         <div class="btn-row">
           <a class="btn solid" href="https://github.com/Tatenda1112/wicknell-chivayo-donation-data-pipeline" target="_blank" rel="noopener">See the code ↗</a>
+          <button class="btn" id="runPipelineBtn" type="button">▶ Run it</button>
         </div>
-      </div>
-      <div class="preview-frame reveal">
-        <img src="src/images/donation-pipeline-preview.jpg" alt="Power BI dashboard built on top of the pipeline" loading="lazy">
+        <div class="terminal" id="terminal" hidden>
+          <div class="terminal-head"><span></span><span></span><span></span></div>
+          <div class="terminal-body" id="terminalBody"></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ SIDE PROJECTS ============ -->
   <section class="section" id="side">
-    <div class="section-head reveal">
-      <h2>Two things I run on the side</h2>
-    </div>
+    <div class="section-head reveal"><h2>Two things I run on the side</h2></div>
     <div class="side-grid">
       <div class="side-card reveal">
         <h3>Sheafly</h3>
@@ -83,9 +160,96 @@
       </div>
       <div class="side-card reveal">
         <h3>TatsTech</h3>
-        <p>I teach Python, SQL and Excel in plain language, and have delivered 30+ data projects for clients since founding it.</p>
+        <p>I teach Python, SQL and Excel in plain language. 30+ data projects delivered, more than 20 students have gone on to distinctions.</p>
         <a class="btn" href="https://tatstech.vercel.app" target="_blank" rel="noopener">Visit TatsTech ↗</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="section-head reveal">
+      <h2>Experience</h2>
+      <p class="dim">Click "tl;dr" on any role for the one-line version.</p>
+    </div>
+
+    <div class="exp-list reveal">
+
+      <article class="exp-card">
+        <div class="exp-top">
+          <div class="exp-badge">S</div>
+          <div><div class="exp-org">SIVIO Institute</div><div class="exp-role">Data Analytics Intern · Harare</div></div>
+          <div class="exp-dates">Jul 2026 – Oct 2026</div>
+        </div>
+        <button class="tldr-btn" data-target="tldr-sivio">💬 tl;dr</button>
+        <p class="exp-tldr" id="tldr-sivio" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Automated cleaning of African philanthropic giving data; handled anonymisation for a 17-country youth employment study.</p>
+        <ul class="exp-full" id="full-sivio">
+          <li><b>Built Python scripts</b> that automated the cleaning and processing of philanthropic giving data scraped from websites across Africa, cutting turnaround time by 20%.</li>
+          <li><b>Protected personal data</b> for a 17-country youth employment study led by CAPSI (Wits Business School) with the Mastercard Foundation — transcription, anonymisation and secure storage of interview data in MAXQDA.</li>
+          <li>Built a <b>Power BI (DAX) dashboard</b> for the State of Giving in Africa report.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-top">
+          <div class="exp-badge">G</div>
+          <div><div class="exp-org">Global Leaf Tobacco Company Ltd.</div><div class="exp-role">Data Analytics · Harare</div></div>
+          <div class="exp-dates">Mar 2026 – Jun 2026</div>
+        </div>
+        <button class="tldr-btn" data-target="tldr-glt">💬 tl;dr</button>
+        <p class="exp-tldr" id="tldr-glt" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Automated daily sales/stock reporting with Python and SQL, cutting manual time by 20%.</p>
+        <ul class="exp-full" id="full-glt">
+          <li>Automated <b>daily sales and stock reporting</b> with scheduled Python (Pandas, FastAPI) and SQL, reducing manual reporting time by 20%.</li>
+          <li><b>Reconciled data</b> across multiple source systems and built an Excel KPI dashboard used for management decisions.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-top">
+          <div class="exp-badge">T</div>
+          <div><div class="exp-org">TatsTech</div><div class="exp-role">Founder · Zimbabwe</div></div>
+          <div class="exp-dates">Jan 2025 – Present</div>
+        </div>
+        <button class="tldr-btn" data-target="tldr-tats">💬 tl;dr</button>
+        <p class="exp-tldr" id="tldr-tats" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Teach Python, SQL and Excel; 30+ projects delivered, 20+ students reached distinctions.</p>
+        <ul class="exp-full" id="full-tats">
+          <li><b>Delivered 30+ data analytics and research projects</b> for clients.</li>
+          <li><b>Teach Python, SQL and Excel</b> to students in plain language, mentoring them through data cleaning, exploratory analysis and dashboard projects.</li>
+          <li>More than <b>20 students have gone on to achieve distinctions</b>.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-top">
+          <div class="exp-badge">C</div>
+          <div><div class="exp-org">Claxon Actuaries</div><div class="exp-role">Data Scientist Intern · Harare</div></div>
+          <div class="exp-dates">Aug 2023 – Aug 2024</div>
+        </div>
+        <button class="tldr-btn" data-target="tldr-claxon">💬 tl;dr</button>
+        <p class="exp-tldr" id="tldr-claxon" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Built ETL pipelines and PD/LGD/survival models for IFRS 9/17 on real financial data.</p>
+        <ul class="exp-full" id="full-claxon">
+          <li><b>Cleaned and structured actuarial datasets</b> for IFRS 17 valuation models using Excel and Python.</li>
+          <li>Built automated <b>Python ETL pipelines</b> and maintained PostgreSQL and MySQL databases for reporting.</li>
+          <li>Developed supervised <b>machine learning models (PD, LGD, survival)</b> for IFRS 9 on large financial datasets.</li>
+          <li>Implemented validation checks that improved data accuracy; built <b>Power BI dashboards</b> for risk, claims and forecasting.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-top">
+          <div class="exp-badge">H</div>
+          <div><div class="exp-org">H&amp;J Consultancy</div><div class="exp-role">Part-Time Data Clerk · Harare</div></div>
+          <div class="exp-dates">Aug 2022 – Sep 2023</div>
+        </div>
+        <button class="tldr-btn" data-target="tldr-hj">💬 tl;dr</button>
+        <p class="exp-tldr" id="tldr-hj" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Cleaned and validated large UNECA COVID-19 survey datasets.</p>
+        <ul class="exp-full" id="full-hj">
+          <li><b>Cleaned and validated</b> large-scale UNECA COVID-19 survey datasets.</li>
+          <li><b>Automated survey aggregation</b> and error-reporting with Python scripts.</li>
+          <li>Performed consistency checks, deduplication and data quality reviews.</li>
+        </ul>
+      </article>
+
     </div>
   </section>
 
@@ -95,54 +259,33 @@
       <h2>Some other things I've built</h2>
       <p class="dim">Smaller projects, mostly data and machine learning.</p>
     </div>
-
     <div class="proj-list reveal">
       <a class="proj-row" href="https://github.com/Tatenda1112/nyasha....climate" target="_blank" rel="noopener">
-        <span class="proj-left">
-          <span class="proj-name">Climate Risk &amp; Crop Insurance Dashboard</span>
-          <span class="proj-stack">FastAPI · Next.js</span>
-        </span>
+        <span class="proj-left"><span class="proj-name">Climate Risk &amp; Crop Insurance Dashboard</span><span class="proj-stack">FastAPI · Next.js</span></span>
         <span class="proj-desc">Simulated dashboard for climate risk and crop insurance data <span class="arrow">↗</span></span>
       </a>
       <a class="proj-row" href="https://github.com/Tatenda1112/KYC-system" target="_blank" rel="noopener">
-        <span class="proj-left">
-          <span class="proj-name">KYC Compliance Tool</span>
-          <span class="proj-stack">Node.js · Express · MongoDB</span>
-        </span>
+        <span class="proj-left"><span class="proj-name">KYC Compliance Tool</span><span class="proj-stack">Node.js · Express · MongoDB</span></span>
         <span class="proj-desc">Registration and scoring tool for small-scale miners' KYC checks <span class="arrow">↗</span></span>
       </a>
       <a class="proj-row" href="https://github.com/Tatenda1112/Data-Cleaning-App" target="_blank" rel="noopener">
-        <span class="proj-left">
-          <span class="proj-name">Data Cleaning Studio</span>
-          <span class="proj-stack">FastAPI · React</span>
-        </span>
+        <span class="proj-left"><span class="proj-name">Data Cleaning Studio</span><span class="proj-stack">FastAPI · React</span></span>
         <span class="proj-desc">Upload a CSV or Excel file, apply cleaning checks, download the result <span class="arrow">↗</span></span>
       </a>
       <a class="proj-row" href="https://github.com/Tatenda1112/Custom-Transformation" target="_blank" rel="noopener">
-        <span class="proj-left">
-          <span class="proj-name">Custom ML Transformers</span>
-          <span class="proj-stack">Python · scikit-learn</span>
-        </span>
+        <span class="proj-left"><span class="proj-name">Custom ML Transformers</span><span class="proj-stack">Python · scikit-learn</span></span>
         <span class="proj-desc">Scaling, encoding, outlier and power-transform steps for ML pipelines <span class="arrow">↗</span></span>
       </a>
       <a class="proj-row" href="https://github.com/Tatenda1112/Adventure-Power-BI-" target="_blank" rel="noopener">
-        <span class="proj-left">
-          <span class="proj-name">AdventureWorks Sales Dashboard</span>
-          <span class="proj-stack">Power BI · DAX</span>
-        </span>
+        <span class="proj-left"><span class="proj-name">AdventureWorks Sales Dashboard</span><span class="proj-stack">Power BI · DAX</span></span>
         <span class="proj-desc">One-page dashboard on 2013 sales, categories and top customers <span class="arrow">↗</span></span>
       </a>
       <a class="proj-row" href="https://github.com/Tatenda1112/Forecast-Exchange-Rate-Zig-USD" target="_blank" rel="noopener">
-        <span class="proj-left">
-          <span class="proj-name">ZiG/USD Exchange Rate Forecast</span>
-          <span class="proj-stack">Python · Jupyter</span>
-        </span>
+        <span class="proj-left"><span class="proj-name">ZiG/USD Exchange Rate Forecast</span><span class="proj-stack">Python · Jupyter</span></span>
         <span class="proj-desc">A short-term forecast of Zimbabwe's ZiG → USD rate <span class="arrow">↗</span></span>
       </a>
     </div>
-    <div class="see-all reveal">
-      <a href="https://github.com/Tatenda1112?tab=repositories" target="_blank" rel="noopener">See all 16 repositories on GitHub →</a>
-    </div>
+    <div class="see-all reveal"><a href="https://github.com/Tatenda1112?tab=repositories" target="_blank" rel="noopener">See all 16 repositories on GitHub →</a></div>
   </section>
 
   <!-- ============ COMPETITIONS ============ -->
@@ -154,7 +297,7 @@
   <section class="section" id="contact">
     <div class="section-head reveal">
       <h2>Say hi</h2>
-      <p class="dim">Based in Harare, Zimbabwe. Open to remote work in any time zone.</p>
+      <p class="dim">Based in Harare, Zimbabwe. Open to remote work in any time zone — and to helping with thesis or dissertation data analysis.</p>
     </div>
     <div class="contact-links reveal">
       <a href="mailto:tatendatatenda1112@gmail.com">Email</a>
