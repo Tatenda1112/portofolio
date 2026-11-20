@@ -3,351 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tatenda Mukonoweshuro</title>
-<meta name="description" content="Tatenda Mukonoweshuro — Data Analyst, Data Engineer and AI Automation. Pipelines, dashboards and models, built end to end.">
+<title>tatenda mukonoweshuro</title>
+<meta name="description" content="Tatenda Mukonoweshuro — data engineer with an analyst's eye. Pipelines, dashboards and models, built end to end.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="progress" id="progress"></div>
 <div class="cursor-dot" id="cursorDot"></div>
 
-<header class="site-header" id="siteHeader">
+<nav class="nav" id="nav">
   <div class="inner">
-    <a href="#top" class="wordmark">Tatenda<span class="blip">.</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Say hi</a>
-      <button class="theme-btn" id="themeBtn" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
-    </nav>
+    <a href="#top" class="mark">tatenda<span class="blip">.</span></a>
+    <div class="links">
+      <a href="#about">about</a>
+      <a href="#work">work</a>
+      <a href="#experience">experience</a>
+      <a href="#say-hi">say hi</a>
+      <button class="icon-btn" id="themeBtn" title="light / dark" aria-label="Toggle theme">☾</button>
+    </div>
   </div>
-</header>
+</nav>
 
-<main class="wrap">
+<main class="wrap" id="top">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="top">
-    <span class="eyebrow">Data Analyst · Data Engineer · AI Automation</span>
-    <h1>Hi, I'm Tatenda <span class="wave">👋</span></h1>
+  <!-- cover art -->
+  <div class="cover reveal">
+    <svg viewBox="0 0 620 210" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffd9a8"/>
+          <stop offset="0.45" stop-color="#ff9e6b"/>
+          <stop offset="0.75" stop-color="#e8623c"/>
+          <stop offset="1" stop-color="#9c3b57"/>
+        </linearGradient>
+        <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity="0.0"/>
+          <stop offset="0.5" stop-color="#fff" stop-opacity="0.85"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0.0"/>
+        </linearGradient>
+      </defs>
+      <rect width="620" height="210" fill="url(#sky)"/>
+      <g class="wave" fill="none" stroke="url(#ln)" stroke-width="2">
+        <path d="M-20,150 C 90,110 150,185 260,140 S 470,95 640,150"><animate attributeName="d" dur="11s" repeatCount="indefinite" values="M-20,150 C 90,110 150,185 260,140 S 470,95 640,150;M-20,150 C 90,180 150,110 260,160 S 470,135 640,120;M-20,150 C 90,110 150,185 260,140 S 470,95 640,150"/></path>
+        <path d="M-20,120 C 100,80 170,150 280,110 S 480,70 640,120" stroke-opacity="0.6"><animate attributeName="d" dur="14s" repeatCount="indefinite" values="M-20,120 C 100,80 170,150 280,110 S 480,70 640,120;M-20,120 C 100,140 170,90 280,130 S 480,110 640,95;M-20,120 C 100,80 170,150 280,110 S 480,70 640,120"/></path>
+        <path d="M-20,178 C 120,150 200,200 300,170 S 500,140 640,178" stroke-opacity="0.4"><animate attributeName="d" dur="17s" repeatCount="indefinite" values="M-20,178 C 120,150 200,200 300,170 S 500,140 640,178;M-20,178 C 120,195 200,160 300,185 S 500,165 640,160;M-20,178 C 120,150 200,200 300,170 S 500,140 640,178"/></path>
+      </g>
+      <g fill="#fff" fill-opacity="0.85">
+        <circle cx="470" cy="60" r="3"/><circle cx="520" cy="95" r="2"/><circle cx="420" cy="90" r="2"/>
+      </g>
+    </svg>
+  </div>
 
-    <div class="status-row">
-      <span class="pill"><span class="dot"></span>open to data &amp; AI roles</span>
-      <span class="clock" id="clock">Harare · --:--</span>
+  <!-- profile -->
+  <header class="profile reveal">
+    <img src="src/images/tatenda-avatar.jpg" alt="Tatenda Mukonoweshuro" class="avatar">
+    <h1>tatenda mukonoweshuro <span style="font-size:0.6em;">♪</span></h1>
+    <div class="tagline">data engineer with an analyst's eye</div>
+
+    <div class="meta">
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> data &amp; AI engineer, freelance</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> harare, zimbabwe</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span id="clock">--:--</span> <span class="ahead" id="ahead"></span></div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> <a href="mailto:tatendatatenda1112@gmail.com">tatendatatenda1112@gmail.com</a></div>
     </div>
 
-    <div class="hero-row">
-      <img src="src/images/tatenda-avatar.jpg" alt="Tatenda Mukonoweshuro" class="avatar">
-      <p class="lede">I turn raw, messy data into decisions people can act on — from the pipeline that moves it, to the model that explains it, to the dashboard a manager can read in a minute.</p>
+    <div class="pills">
+      <a class="pill" href="https://github.com/Tatenda1112" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg> github</a>
+      <a class="pill" href="https://linkedin.com/in/tatenda-mukonoweshuro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.9H5.67v8.44h2.67zM7 8.67a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.67v-4.63c0-2.47-1.32-3.62-3.08-3.62-1.42 0-2.06.78-2.42 1.33V9.9h-2.67v8.44h2.67v-4.7c0-.25.02-.5.09-.68.2-.5.65-1.01 1.42-1.01 1 0 1.4.76 1.4 1.88v4.51h2.67z"/></svg> linkedin</a>
+      <a class="pill" href="https://zindi.africa/users/TatsTech" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg> zindi</a>
+      <a class="pill" href="https://sheaflydocs.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> sheafly</a>
     </div>
 
-    <p class="by-day">Tools I reach for: Power BI, SQL, Python, PostgreSQL, SQL Server, n8n, FastAPI. I also teach at <a href="https://tatstech.vercel.app" target="_blank" rel="noopener">TatsTech</a> and build <a href="https://sheaflydocs.com" target="_blank" rel="noopener">Sheafly</a> on the side.</p>
+    <div class="open-chip"><span class="dot"></span> open to data &amp; AI roles — and freelance dashboards</div>
+  </header>
 
-    <!-- SIGNATURE: a live data pipeline -->
-    <div class="pipeline-stage reveal">
-      <span class="cap">live · data in motion</span>
-      <canvas id="pipelineCanvas"></canvas>
-      <span class="hint">move your mouse through it ✦</span>
-    </div>
-  </section>
-
-  <!-- ============ 01 · WHAT I DO ============ -->
+  <!-- about -->
   <section class="section" id="about">
-    <div class="section-head reveal">
-      <span class="section-num">01 — what i do</span>
-      <h2>Across the whole data journey</h2>
-      <p class="dim">Extracting it, moving and cleaning it, modelling it, and putting it in front of someone who has to decide something.</p>
+    <h2 class="reveal">about</h2>
+    <div class="prose reveal">
+      <p>I turn raw, messy data into decisions people can act on. I work across the whole journey: extracting data, building the pipelines that move and clean it, modelling it, and delivering a dashboard a manager can read in a minute.</p>
+      <p>I care more about the question than the chart. A good dashboard is one that changes what someone does on Monday — so I spend as much time on data quality and the "so what" as on the visuals.</p>
+      <p>Lately I've been deep in AI too: LLM-assisted extraction that turns unstructured text into clean records, FastAPI backends, and n8n automations that run on their own. I also founded <a href="https://tatstech.vercel.app" target="_blank" rel="noopener">TatsTech</a>, where I've taught 30+ students, and I build <a href="https://sheaflydocs.com" target="_blank" rel="noopener">Sheafly</a> on the side.</p>
     </div>
-    <div class="do-grid reveal">
-      <div class="do-card">
-        <span class="tag">Data Analytics</span>
-        <h3>Dashboards people actually read</h3>
-        <p>Power BI with DAX, Power Query and relational data models that turn business data into a clear answer.</p>
-      </div>
-      <div class="do-card">
-        <span class="tag">Data Engineering</span>
-        <h3>Pipelines that run on their own</h3>
-        <p>ETL with Python, SQL, PostgreSQL and n8n — bronze, silver and gold layers, star schemas feeding reporting.</p>
-      </div>
-      <div class="do-card">
-        <span class="tag">ML &amp; AI</span>
-        <h3>Models and automation</h3>
-        <p>Credit risk and survival models, LLM-assisted extraction from unstructured text, FastAPI backends, n8n workflows.</p>
-      </div>
-      <div class="do-card">
-        <span class="tag">Training</span>
-        <h3>TatsTech — founder</h3>
-        <p>30+ students supported in Python, data analysis and research; more than 20 have gone on to distinctions.</p>
-      </div>
-    </div>
-    <div class="tool-row reveal">
-      <span class="tool-chip">Power BI</span><span class="tool-chip">SQL</span><span class="tool-chip">Python</span>
-      <span class="tool-chip">PostgreSQL</span><span class="tool-chip">SQL Server</span><span class="tool-chip">Excel</span>
-      <span class="tool-chip">Spark</span><span class="tool-chip">n8n</span><span class="tool-chip">FastAPI</span>
-      <span class="tool-chip">SPSS</span><span class="tool-chip">R</span>
-    </div>
+    <hr class="rule">
   </section>
 
-  <!-- ============ 02 · FEATURED WORK ============ -->
+  <!-- work -->
   <section class="section" id="work">
-    <div class="section-head reveal">
-      <span class="section-num">02 — featured work</span>
-      <h2>Three data stories</h2>
+    <h2 class="reveal">selected work</h2>
+    <p class="lead reveal">A few projects I'm proud of — most of them built by hand, from extraction to the final screen.</p>
+
+    <div class="work">
+
+      <!-- UZ graduation: a richer card with count-up -->
+      <div class="card reveal" style="padding:18px 20px;">
+        <div class="card-top">
+          <div class="badge">U</div>
+          <div><div class="card-name">UZ 45th Graduation, 2026</div><div class="card-role">Power BI · Power Query · DAX</div></div>
+          <span class="status">portfolio</span>
+        </div>
+        <p class="prose" style="margin:13px 0 12px;font-size:14px;color:var(--ink-dim);">An 80-page static graduation handbook, rebuilt into a three-page interactive dashboard: a graduation overview, an academic-excellence view, and a searchable graduate directory.</p>
+        <div class="uz-stats" id="uzStats">
+          <div class="uz-stat"><b data-count="7127">0</b><span>graduates</span></div>
+          <div class="uz-stat"><b data-count="366">0</b><span>programmes</span></div>
+          <div class="uz-stat"><b data-count="53" data-suffix="%">0</b><span>women</span></div>
+          <div class="uz-stat"><b data-count="817">0</b><span>recognitions</span></div>
+        </div>
+        <p class="livelink">built from the public UZ handbook, 2026 — not an official UZ publication</p>
+      </div>
+
+      <!-- FMCG -->
+      <a class="proj reveal" href="https://www.linkedin.com/in/tatenda-mukonoweshuro" target="_blank" rel="noopener">
+        <div class="thumb"><img src="src/images/fmcg-executive.jpg" alt="FMCG executive dashboard" loading="lazy"></div>
+        <div>
+          <div class="pname">FMCG Supply Chain &amp; Profitability <span style="color:var(--ink-faint);">↗</span></div>
+          <div class="pstack">Power BI · DAX</div>
+          <div class="pdesc">Why a distributor's sales grew 7.6% to $58M while profit leaked away — stockouts, losing promos, and a bestseller that barely pays.</div>
+        </div>
+      </a>
+
+      <!-- Donation pipeline -->
+      <a class="proj reveal" href="https://github.com/Tatenda1112/wicknell-chivayo-donation-data-pipeline" target="_blank" rel="noopener">
+        <div class="thumb"><img src="src/images/donation-pipeline-preview.jpg" alt="Donation pipeline dashboard" loading="lazy"></div>
+        <div>
+          <div class="pname">Public Posts → Data Warehouse <span style="color:var(--ink-faint);">↗</span></div>
+          <div class="pstack">n8n · LLM · SQL Server · Power BI</div>
+          <div class="pdesc">A daily n8n + LLM pipeline that processed 1,102 posts into a bronze/silver/gold warehouse, every figure traceable to its source.</div>
+        </div>
+      </a>
+
+      <!-- Sheafly -->
+      <a class="proj reveal" href="https://sheaflydocs.com" target="_blank" rel="noopener">
+        <div class="thumb art"><svg viewBox="0 0 96 70" xmlns="http://www.w3.org/2000/svg"><rect width="96" height="70" fill="var(--paper)"/><g stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"><rect x="20" y="14" width="40" height="52" rx="4"/><path d="M28 26h24M28 34h24M28 42h16"/><path d="M58 20l20 8-10 22-18-7" fill="color-mix(in srgb, var(--accent) 12%, transparent)"/></g></svg></div>
+        <div>
+          <div class="pname">Sheafly <span style="color:var(--ink-faint);">↗</span></div>
+          <div class="pstack">FastAPI · React · LLM APIs</div>
+          <div class="pdesc">A document automation platform I founded — formats Word, converts Word to LaTeX, writes with LLMs, with accounts and payments.</div>
+        </div>
+      </a>
     </div>
 
-    <!-- UZ GRADUATION -->
-    <div class="uz">
-      <div class="section-head reveal" style="margin-top:6px;">
-        <h3 style="font-size:22px;">UZ 45th Graduation, 2026 — a handbook turned into a product</h3>
-        <p class="dim">An 80-page static graduation handbook, rebuilt into a three-page interactive Power BI dashboard you can actually explore.</p>
-      </div>
-      <div class="uz-stats reveal" id="uzStats">
-        <div class="uz-stat"><b data-count="7127">0</b><span>graduates</span></div>
-        <div class="uz-stat"><b data-count="366">0</b><span>academic programmes</span></div>
-        <div class="uz-stat"><b data-count="53" data-suffix="%">0</b><span>women graduates</span></div>
-        <div class="uz-stat"><b data-count="817">0</b><span>academic recognitions</span></div>
-      </div>
-
-      <div class="ratio reveal" data-fill="79">
-        <div class="ratio-label"><span>undergraduate 79%</span><span>postgraduate 21%</span></div>
-        <div class="ratio-bar"><div class="ratio-fill seg-a"></div><div class="ratio-fill seg-b" data-fill="21"></div></div>
-      </div>
-
-      <div class="uz-facts reveal">
-        <div class="uz-fact"><b>Business &amp; Economics</b> produced the most graduates (1,367), then <b>Medicine &amp; Health Sciences</b> (1,139).</div>
-        <div class="uz-fact"><b>Actuarial Science</b> led undergraduate First Class awards with 36 — followed by Biomedical Sciences with 33.</div>
-        <div class="uz-fact"><b>Medicine</b> recorded the most recognitions (146), then Education (130). Recognitions were ~11.5% of graduates.</div>
-        <div class="uz-fact"><b>Biomedical Sciences</b> was the single largest programme, with 301 graduates.</div>
-      </div>
-
-      <div class="uz-sections reveal">
-        <span class="chip"><b>▸</b> Graduation Overview</span>
-        <span class="chip"><b>▸</b> Academic Excellence</span>
-        <span class="chip"><b>▸</b> Graduate Directory (searchable)</span>
-      </div>
-      <p class="src-note reveal">Built with Power BI, Power Query, DAX and Excel. Independently developed from the public UZ 45th Graduation Handbook, 2026 — not an official University of Zimbabwe publication.</p>
+    <!-- dashboards gallery -->
+    <h2 class="reveal" style="font-size:24px;margin-top:34px;">from my dashboards</h2>
+    <p class="gallery-hint reveal">drag sideways to look around ✦</p>
+    <div class="gallery reveal" id="gallery">
+      <div class="shot"><img src="src/images/fmcg-executive.jpg" alt="Executive overview"><span class="cap">FMCG · executive</span></div>
+      <div class="shot"><img src="src/images/fmcg-inventory.jpg" alt="Inventory & warehouse"><span class="cap">FMCG · inventory</span></div>
+      <div class="shot"><img src="src/images/fmcg-pricing.jpg" alt="Pricing & profitability"><span class="cap">FMCG · profitability</span></div>
+      <div class="shot"><img src="src/images/donation-pipeline-preview.jpg" alt="Donations tracker"><span class="cap">donations · overview</span></div>
     </div>
-
-    <!-- FMCG DASHBOARD -->
-    <div class="feature-grid" style="margin-top:46px;">
-      <div class="feature-text reveal">
-        <h3 style="font-size:22px;">Why growing sales don't mean growing profit</h3>
-        <p>A three-page Power BI dashboard on a simulated FMCG distributor. Revenue was up 7.6% to $58M — but underneath it, three leaks were quietly eating the profit.</p>
-        <div class="leak-grid">
-          <div class="leak"><b>Empty shelves.</b> December stockouts doubled; Masvingo ran dry 3× as often as Harare. $1.11M in sales never happened.</div>
-          <div class="leak"><b>Discounts that cost more than they earn.</b> $1.03M in promo spend returned $543K. 14 of 40 campaigns lost money.</div>
-          <div class="leak"><b>The bestseller that barely pays.</b> The top seller ($7.6M) kept only 11.7% as profit after cost to serve.</div>
-        </div>
-        <p class="fine-note">The company and figures are fictional, built for portfolio purposes. The pattern — and the fix — is real.</p>
-      </div>
-      <div>
-        <div class="tab-row">
-          <button class="tab-btn active" data-img="0">Executive</button>
-          <button class="tab-btn" data-img="1">Inventory</button>
-          <button class="tab-btn" data-img="2">Pricing</button>
-        </div>
-        <div class="preview-frame reveal" id="fmcgFrame">
-          <img src="src/images/fmcg-executive.jpg" alt="Executive overview page" class="active" data-i="0">
-          <img src="src/images/fmcg-inventory.jpg" alt="Inventory and warehouse page" data-i="1">
-          <img src="src/images/fmcg-pricing.jpg" alt="Pricing, promotions and profitability page" data-i="2">
-        </div>
-      </div>
-    </div>
-
-    <!-- DONATION PIPELINE -->
-    <div class="feature-grid" style="margin-top:46px;">
-      <div class="preview-frame reveal">
-        <img src="src/images/donation-pipeline-preview.jpg" alt="Power BI dashboard built on top of the pipeline" class="active" loading="lazy">
-      </div>
-      <div class="feature-text reveal">
-        <h3 style="font-size:22px;">I turn public posts into a warehouse</h3>
-        <p>An n8n workflow collects posts daily, an LLM extracts structured records, and one command loads a SQL Server warehouse feeding Power BI — bronze, silver and gold layers, every figure traceable back to its source.</p>
-        <div class="stat-row">
-          <div class="stat"><b>1,102</b><span>posts processed</span></div>
-          <div class="stat"><b>96%</b><span>auto-sort accuracy</span></div>
-          <div class="stat"><b>3</b><span>warehouse layers</span></div>
-        </div>
-        <div class="btn-row">
-          <a class="btn solid" href="https://github.com/Tatenda1112/wicknell-chivayo-donation-data-pipeline" target="_blank" rel="noopener">See the code ↗</a>
-          <button class="btn" id="runPipelineBtn" type="button">▶ Run it</button>
-        </div>
-        <div class="terminal" id="terminal" hidden>
-          <div class="terminal-head"><span></span><span></span><span></span></div>
-          <div class="terminal-body" id="terminalBody"></div>
-        </div>
-      </div>
-    </div>
+    <hr class="rule">
   </section>
 
-  <!-- ============ 03 · SIDE PROJECTS ============ -->
-  <section class="section" id="side">
-    <div class="section-head reveal"><span class="section-num">03 — on the side</span><h2>Two things I run</h2></div>
-    <div class="side-grid">
-      <div class="side-card reveal">
-        <h3>Sheafly</h3>
-        <p>A document automation platform I founded — formats Word documents, converts Word to LaTeX, and writes with LLMs. Built on FastAPI and React.</p>
-        <a class="btn" href="https://sheaflydocs.com" target="_blank" rel="noopener">Visit Sheafly ↗</a>
-      </div>
-      <div class="side-card reveal">
-        <h3>TatsTech</h3>
-        <p>I teach Python, SQL and Excel in plain language. 30+ data projects delivered, more than 20 students have gone on to distinctions.</p>
-        <a class="btn" href="https://tatstech.vercel.app" target="_blank" rel="noopener">Visit TatsTech ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 04 · EXPERIENCE ============ -->
+  <!-- experience -->
   <section class="section" id="experience">
-    <div class="section-head reveal">
-      <span class="section-num">04 — experience</span>
-      <h2>Where I've worked</h2>
-      <p class="dim">Click "tl;dr" on any role for the one-line version.</p>
-    </div>
-    <div class="exp-list reveal">
+    <h2 class="reveal">experience</h2>
+    <p class="lead reveal">Tap "tl;dr" on any role for the short version.</p>
+    <div class="cards reveal">
 
-      <article class="exp-card">
-        <div class="exp-top">
-          <div class="exp-badge">S</div>
-          <div><div class="exp-org">SIVIO Institute</div><div class="exp-role">Data Analytics Intern · Harare</div></div>
-          <div class="exp-dates">Jul 2026 – Oct 2026</div>
+      <article class="card">
+        <div class="card-top">
+          <div class="badge">S</div>
+          <div><div class="card-name">SIVIO Institute</div><div class="card-role">data analytics intern · harare</div></div>
+          <span class="status">jul–oct 2026</span>
         </div>
-        <button class="tldr-btn" data-target="tldr-sivio">💬 tl;dr</button>
-        <p class="exp-tldr" id="tldr-sivio" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Automated cleaning of African philanthropic giving data; handled anonymisation for a 17-country youth employment study.</p>
-        <ul class="exp-full" id="full-sivio">
-          <li><b>Built Python scripts</b> that automated the cleaning and processing of philanthropic giving data scraped from websites across Africa, cutting turnaround time by 20%.</li>
-          <li><b>Protected personal data</b> for a 17-country youth employment study led by CAPSI (Wits Business School) with the Mastercard Foundation — transcription, anonymisation and secure storage in MAXQDA.</li>
+        <button class="tldr-btn" data-target="sivio">▸ tl;dr</button>
+        <p class="exp-tldr" id="tldr-sivio" style="display:none;font-size:13.5px;color:var(--ink-dim);margin-top:9px;">Automated cleaning of African philanthropic giving data; handled anonymisation for a 17-country youth employment study.</p>
+        <ul class="full" id="full-sivio">
+          <li><b>Built Python scripts</b> that automated cleaning of philanthropic giving data scraped from across Africa, cutting turnaround time by 20%.</li>
+          <li><b>Protected personal data</b> for a 17-country youth employment study (CAPSI / Wits Business School with the Mastercard Foundation) — anonymisation and secure storage in MAXQDA.</li>
           <li>Built a <b>Power BI (DAX) dashboard</b> for the State of Giving in Africa report.</li>
         </ul>
       </article>
 
-      <article class="exp-card">
-        <div class="exp-top">
-          <div class="exp-badge">G</div>
-          <div><div class="exp-org">Global Leaf Tobacco Company Ltd.</div><div class="exp-role">Data Analytics · Harare</div></div>
-          <div class="exp-dates">Mar 2026 – Jun 2026</div>
+      <article class="card">
+        <div class="card-top">
+          <div class="badge">G</div>
+          <div><div class="card-name">Global Leaf Tobacco Co.</div><div class="card-role">data analytics · harare</div></div>
+          <span class="status">mar–jun 2026</span>
         </div>
-        <button class="tldr-btn" data-target="tldr-glt">💬 tl;dr</button>
-        <p class="exp-tldr" id="tldr-glt" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Automated daily sales/stock reporting with Python and SQL, cutting manual time by 20%.</p>
-        <ul class="exp-full" id="full-glt">
-          <li>Automated <b>daily sales and stock reporting</b> with scheduled Python (Pandas, FastAPI) and SQL, reducing manual reporting time by 20%.</li>
-          <li><b>Reconciled data</b> across multiple source systems and built an Excel KPI dashboard used for management decisions.</li>
+        <button class="tldr-btn" data-target="glt">▸ tl;dr</button>
+        <p class="exp-tldr" id="tldr-glt" style="display:none;font-size:13.5px;color:var(--ink-dim);margin-top:9px;">Automated daily sales and stock reporting with Python and SQL, cutting manual time by 20%.</p>
+        <ul class="full" id="full-glt">
+          <li>Automated <b>daily sales and stock reporting</b> with scheduled Python (Pandas, FastAPI) and SQL, cutting manual time by 20%.</li>
+          <li><b>Reconciled data</b> across multiple source systems and built an Excel KPI dashboard for management decisions.</li>
         </ul>
       </article>
 
-      <article class="exp-card">
-        <div class="exp-top">
-          <div class="exp-badge">T</div>
-          <div><div class="exp-org">TatsTech</div><div class="exp-role">Founder · Zimbabwe</div></div>
-          <div class="exp-dates">Jan 2025 – Present</div>
+      <article class="card">
+        <div class="card-top">
+          <div class="badge">T</div>
+          <div><div class="card-name">TatsTech</div><div class="card-role">founder · zimbabwe</div></div>
+          <span class="status now"><span class="dot"></span>now</span>
         </div>
-        <button class="tldr-btn" data-target="tldr-tats">💬 tl;dr</button>
-        <p class="exp-tldr" id="tldr-tats" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Teach Python, SQL and Excel; 30+ projects delivered, 20+ students reached distinctions.</p>
-        <ul class="exp-full" id="full-tats">
+        <button class="tldr-btn" data-target="tats">▸ tl;dr</button>
+        <p class="exp-tldr" id="tldr-tats" style="display:none;font-size:13.5px;color:var(--ink-dim);margin-top:9px;">Teach Python, SQL and Excel; 30+ projects delivered, 20+ students reached distinctions.</p>
+        <ul class="full" id="full-tats">
           <li><b>Delivered 30+ data analytics and research projects</b> for clients.</li>
-          <li><b>Teach Python, SQL and Excel</b> in plain language, mentoring through data cleaning, exploratory analysis and dashboard projects.</li>
-          <li>More than <b>20 students have gone on to achieve distinctions</b>.</li>
+          <li><b>Teach Python, SQL and Excel</b> in plain language, mentoring through cleaning, analysis and dashboards.</li>
+          <li>More than <b>20 students have gone on to distinctions</b>.</li>
+        </ul>
+        <p class="livelink">live on · <a href="https://tatstech.vercel.app" target="_blank" rel="noopener">tatstech.vercel.app ↗</a></p>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="badge">C</div>
+          <div><div class="card-name">Claxon Actuaries</div><div class="card-role">data scientist intern · harare</div></div>
+          <span class="status">2023–2024</span>
+        </div>
+        <button class="tldr-btn" data-target="claxon">▸ tl;dr</button>
+        <p class="exp-tldr" id="tldr-claxon" style="display:none;font-size:13.5px;color:var(--ink-dim);margin-top:9px;">Built ETL pipelines and PD/LGD/survival models for IFRS 9/17 on real financial data.</p>
+        <ul class="full" id="full-claxon">
+          <li><b>Built Python ETL pipelines</b> and maintained PostgreSQL and MySQL databases for reporting.</li>
+          <li>Developed supervised <b>ML models (PD, LGD, survival)</b> for IFRS 9 on large financial datasets.</li>
+          <li>Cleaned actuarial datasets for IFRS 17 and built <b>Power BI dashboards</b> for risk and claims.</li>
         </ul>
       </article>
 
-      <article class="exp-card">
-        <div class="exp-top">
-          <div class="exp-badge">C</div>
-          <div><div class="exp-org">Claxon Actuaries</div><div class="exp-role">Data Scientist Intern · Harare</div></div>
-          <div class="exp-dates">Aug 2023 – Aug 2024</div>
+      <article class="card">
+        <div class="card-top">
+          <div class="badge">H</div>
+          <div><div class="card-name">H&amp;J Consultancy</div><div class="card-role">part-time data clerk · harare</div></div>
+          <span class="status">2022–2023</span>
         </div>
-        <button class="tldr-btn" data-target="tldr-claxon">💬 tl;dr</button>
-        <p class="exp-tldr" id="tldr-claxon" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Built ETL pipelines and PD/LGD/survival models for IFRS 9/17 on real financial data.</p>
-        <ul class="exp-full" id="full-claxon">
-          <li><b>Cleaned and structured actuarial datasets</b> for IFRS 17 valuation models using Excel and Python.</li>
-          <li>Built automated <b>Python ETL pipelines</b> and maintained PostgreSQL and MySQL databases for reporting.</li>
-          <li>Developed supervised <b>machine learning models (PD, LGD, survival)</b> for IFRS 9 on large financial datasets.</li>
-          <li>Implemented validation checks; built <b>Power BI dashboards</b> for risk, claims and forecasting.</li>
-        </ul>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-top">
-          <div class="exp-badge">H</div>
-          <div><div class="exp-org">H&amp;J Consultancy</div><div class="exp-role">Part-Time Data Clerk · Harare</div></div>
-          <div class="exp-dates">Aug 2022 – Sep 2023</div>
-        </div>
-        <button class="tldr-btn" data-target="tldr-hj">💬 tl;dr</button>
-        <p class="exp-tldr" id="tldr-hj" style="display:none;font-size:14.5px;color:var(--ink-dim);margin-top:8px;">Cleaned and validated large UNECA COVID-19 survey datasets.</p>
-        <ul class="exp-full" id="full-hj">
+        <button class="tldr-btn" data-target="hj">▸ tl;dr</button>
+        <p class="exp-tldr" id="tldr-hj" style="display:none;font-size:13.5px;color:var(--ink-dim);margin-top:9px;">Cleaned and validated large UNECA COVID-19 survey datasets.</p>
+        <ul class="full" id="full-hj">
           <li><b>Cleaned and validated</b> large-scale UNECA COVID-19 survey datasets.</li>
           <li><b>Automated survey aggregation</b> and error-reporting with Python scripts.</li>
-          <li>Performed consistency checks, deduplication and data quality reviews.</li>
         </ul>
       </article>
 
     </div>
+    <hr class="rule">
   </section>
 
-  <!-- ============ 05 · OTHER THINGS ============ -->
-  <section class="section" id="made">
-    <div class="section-head reveal">
-      <span class="section-num">05 — the archive</span>
-      <h2>Some other things I've built</h2>
-      <p class="dim">Smaller projects, mostly data and machine learning.</p>
-    </div>
-    <div class="proj-list reveal">
-      <a class="proj-row" href="https://github.com/Tatenda1112/nyasha....climate" target="_blank" rel="noopener">
-        <span class="proj-left"><span class="proj-name">Climate Risk &amp; Crop Insurance Dashboard</span><span class="proj-stack">FastAPI · Next.js</span></span>
-        <span class="proj-desc">Simulated dashboard for climate risk and crop insurance data <span class="arrow">↗</span></span>
+  <!-- archive -->
+  <section class="section" id="archive">
+    <h2 class="reveal">the archive</h2>
+    <p class="lead reveal">Smaller things, mostly data and machine learning.</p>
+    <div class="archive reveal">
+      <a class="arow" href="https://github.com/Tatenda1112/nyasha....climate" target="_blank" rel="noopener">
+        <span><span class="aname">Climate Risk &amp; Crop Insurance</span><span class="astack">FastAPI · Next.js</span></span>
+        <span class="adesc">A simulated climate-risk and crop-insurance dashboard ↗</span>
       </a>
-      <a class="proj-row" href="https://github.com/Tatenda1112/KYC-system" target="_blank" rel="noopener">
-        <span class="proj-left"><span class="proj-name">KYC Compliance Tool</span><span class="proj-stack">Node.js · Express · MongoDB</span></span>
-        <span class="proj-desc">Registration and scoring tool for small-scale miners' KYC checks <span class="arrow">↗</span></span>
+      <a class="arow" href="https://github.com/Tatenda1112/KYC-system" target="_blank" rel="noopener">
+        <span><span class="aname">KYC Compliance Tool</span><span class="astack">Node.js · Express · MongoDB</span></span>
+        <span class="adesc">Registration &amp; scoring for small-scale miners' KYC ↗</span>
       </a>
-      <a class="proj-row" href="https://github.com/Tatenda1112/Data-Cleaning-App" target="_blank" rel="noopener">
-        <span class="proj-left"><span class="proj-name">Data Cleaning Studio</span><span class="proj-stack">FastAPI · React</span></span>
-        <span class="proj-desc">Upload a CSV or Excel file, apply cleaning checks, download the result <span class="arrow">↗</span></span>
+      <a class="arow" href="https://github.com/Tatenda1112/Custom-Transformation" target="_blank" rel="noopener">
+        <span><span class="aname">Custom ML Transformers</span><span class="astack">Python · scikit-learn</span></span>
+        <span class="adesc">Scaling, encoding, outlier &amp; power-transform steps ↗</span>
       </a>
-      <a class="proj-row" href="https://github.com/Tatenda1112/Custom-Transformation" target="_blank" rel="noopener">
-        <span class="proj-left"><span class="proj-name">Custom ML Transformers</span><span class="proj-stack">Python · scikit-learn</span></span>
-        <span class="proj-desc">Scaling, encoding, outlier and power-transform steps for ML pipelines <span class="arrow">↗</span></span>
+      <a class="arow" href="https://github.com/Tatenda1112/Adventure-Power-BI-" target="_blank" rel="noopener">
+        <span><span class="aname">AdventureWorks Sales</span><span class="astack">Power BI · DAX</span></span>
+        <span class="adesc">One-page dashboard on 2013 sales &amp; top customers ↗</span>
       </a>
-      <a class="proj-row" href="https://github.com/Tatenda1112/Adventure-Power-BI-" target="_blank" rel="noopener">
-        <span class="proj-left"><span class="proj-name">AdventureWorks Sales Dashboard</span><span class="proj-stack">Power BI · DAX</span></span>
-        <span class="proj-desc">One-page dashboard on 2013 sales, categories and top customers <span class="arrow">↗</span></span>
-      </a>
-      <a class="proj-row" href="https://github.com/Tatenda1112/Forecast-Exchange-Rate-Zig-USD" target="_blank" rel="noopener">
-        <span class="proj-left"><span class="proj-name">ZiG/USD Exchange Rate Forecast</span><span class="proj-stack">Python · Jupyter</span></span>
-        <span class="proj-desc">A short-term forecast of Zimbabwe's ZiG → USD rate <span class="arrow">↗</span></span>
+      <a class="arow" href="https://github.com/Tatenda1112/Forecast-Exchange-Rate-Zig-USD" target="_blank" rel="noopener">
+        <span><span class="aname">ZiG/USD Forecast</span><span class="astack">Python · Jupyter</span></span>
+        <span class="adesc">Short-term forecast of Zimbabwe's ZiG → USD rate ↗</span>
       </a>
     </div>
-    <div class="see-all reveal"><a href="https://github.com/Tatenda1112?tab=repositories" target="_blank" rel="noopener">See all 16 repositories on GitHub →</a></div>
+    <div class="see-all reveal"><a href="https://github.com/Tatenda1112?tab=repositories" target="_blank" rel="noopener">all 16 repositories on github →</a></div>
+    <p class="comp reveal" style="margin-top:22px;">On <a href="https://zindi.africa/users/TatsTech" target="_blank" rel="noopener">Zindi</a> I've placed <b>9th of 631</b> (top 2%) in an insurance challenge and <b>3rd of 56</b> in a crop-disease one.</p>
+    <hr class="rule">
   </section>
 
-  <!-- ============ COMPETITIONS ============ -->
-  <section class="section" id="comps">
-    <p class="comp-line reveal">I also compete on <a href="https://zindi.africa/users/TatsTech" target="_blank" rel="noopener">Zindi</a> — ranked <b>9th of 631</b> (top 2%) in an insurance prediction challenge, and <b>3rd of 56</b> in a maize crop disease challenge.</p>
-  </section>
-
-  <!-- ============ 06 · CONTACT ============ -->
-  <section class="section" id="contact">
-    <div class="section-head reveal">
-      <span class="section-num">06 — say hi</span>
-      <h2>Let's talk</h2>
-      <p class="dim">Based in Harare, Zimbabwe. Open to remote work in any time zone — and to helping with thesis or dissertation data analysis.</p>
-    </div>
-    <div class="contact-links reveal">
-      <a href="mailto:tatendatatenda1112@gmail.com">Email</a>
-      <a href="https://github.com/Tatenda1112" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/tatenda-mukonoweshuro" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://zindi.africa/users/TatsTech" target="_blank" rel="noopener">Zindi</a>
+  <!-- say hi -->
+  <section class="section" id="say-hi">
+    <h2 class="reveal">say hi</h2>
+    <p class="lead reveal">Harare-based, open to remote work in any time zone — and happy to help with thesis or dissertation data analysis.</p>
+    <div class="pills reveal">
+      <a class="pill" href="mailto:tatendatatenda1112@gmail.com">✉ email</a>
+      <a class="pill" href="https://github.com/Tatenda1112" target="_blank" rel="noopener">github</a>
+      <a class="pill" href="https://linkedin.com/in/tatenda-mukonoweshuro" target="_blank" rel="noopener">linkedin</a>
+      <a class="pill" href="https://zindi.africa/users/TatsTech" target="_blank" rel="noopener">zindi</a>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="glyph">· · ·</div>
-  <p class="fine">Built by hand, with a bit of help. © 2026 Tatenda Mukonoweshuro.</p>
+  <div class="glyph">←→</div>
+  <p class="fine">built by hand · © 2026 tatenda mukonoweshuro</p>
 </footer>
 
 <script src="script.js"></script>
